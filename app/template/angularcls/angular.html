@@ -1,0 +1,197 @@
+<header>
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll wow fadeInLeft" id="ss"  href="#!/home">Krishna K <i class="fa fa-bolt fa-1x" aria-hidden="true"></i></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" id="ass" >
+          <li >
+            <a class=" wow fadeInDown" href="#!/home">Home</a>
+          </li>
+          <li >
+            <a class=" wow fadeInDown" href="#!/contact">ContactUs</a>
+          </li>
+          <li>
+            <a class=" wow fadeInDown" href="#!/services">Services</a>
+          </li>
+          <li>
+            <a class=" wow fadeInDown" href="#!/resume">Resume</a>
+          </li>
+          <li>
+            <a class=" wow fadeInDown"  href="#!/andriodapp">APP</a>
+          </li>
+          <li>
+            <a class=" wow fadeInDown" href="#!/angular">Angular</a>
+          </li>
+          <li>
+            <a class=" wow fadeInDown" href="#!/login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <div ng-controller="angularController">
+    <br/><br/>
+      <h2>AngularJS Applications</h2>
+    <!--button to go bottom-->
+      <button id="top" ng-click="scrollTo('bottom')">Go to Bottom of the page</button>
+    <!--pannel 1 started-->
+    <button class="accordion">Filters</button>
+    <div class="panel">
+      <p>Any angularjs filter usually takes input and gives output</p><br/>
+       1. currency Format a number to a currency format.<br/>2
+        2.date Format a date to a specified format.<br/>
+        3.filter Select a subset of items from an array.<br/>
+        4.json Format an object to a JSON string.<br/>
+        5.limitTo Limits an array/string, into a specified number of elements/characters.<br/>
+        6.lowercase Format a string to lower case.<br/>
+        7.number Format a number to a string.<br/>
+        8.orderBy Orders an array by an expression.<br/>
+        9.uppercase Format a string to upper case.<br/>
+      </p>
+      <div class="container" >
+          <!--filter search boxes-->
+          <div class="row form-group">
+            <table>
+              <thead>
+                <tr>
+                  <th> <input ng-model="qSerachfirst" placeholder="First Name" class="form-control" style="width: 226px;"/></th>
+                  <th> <input ng-model="qSerachlast" placeholder="Last Name" class="form-control" style="width: 226px;"/></th>
+                  <th><input ng-model="qSerachNo" placeholder="Employee Number" class="form-control" style="width: 226px;"/></th>
+                  <th><input ng-model="qSerachSalary" placeholder="Salary" class="form-control" style="width: 226px;"/></th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        <!--table start-->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Employee number</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Hire date</th>
+                <th>DOB</th>
+              </tr>
+            </thead>
+            <tbody>
+             <!-- <tr ng-repeat="employee in employees | filter:{name:'s'}">-->
+             <tr ng-repeat="employee in employees | filter:{Firstname: qSerachfirst, Number: qSerachNo, Lastname:qSerachlast,Salary:qSerachSalary}">
+                <td>{{employee.Number}}</td>
+                <td>{{employee.Firstname | uppercase}}</td>
+                <td>{{employee.Lastname}}</td>
+                <td>{{employee.gender | lowercase}}</td>
+                <td>{{employee.Email | lowercase}}</td>
+                <td>{{employee.Salary | currency:"$":2}}</td>
+                <td>{{employee.Hire | date:'shortDate'}}</td>
+                <td>{{employee.DOB | date:'longDate'}}</td>
+              </tr>
+             </tbody>
+          </table>
+      </div>
+    </div>
+    <!--pannel 2 started-->
+    <button class="accordion">Angular HTTP request</button>
+    <div class="panel">
+      <div ng-controller="ajaxController">
+        <div class="container">
+          <div class="row form-group">
+            <table>
+              <thead>
+              <tr>
+                <th> <input ng-model="qSearNm" placeholder="Name" class="form-control" style="width: 226px;"/></th>
+                <th> <input ng-model="qSearZp" placeholder="Zip" class="form-control" style="width: 226px;"/></th>
+              </tr>
+              </thead>
+            </table>
+          </div>
+        <table class="table table-hover">
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Date</th>
+            <th>Zip</th>
+          </tr>
+          <!--filter started-->
+          <tr ng-repeat="student in students | filter:{Name: qSearNm, Zip:qSearZp}">
+            <!--data started -->
+            <th>{{student.Name}}</th>
+            <th>{{student.Phone}}</th>
+            <th>{{student.Date}}</th>
+            <th>{{student.Zip}}</th>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <!--pannel 3 started-->
+    <button class="accordion">Two way data binding</button>
+    <div class="panel">
+      <label>Salary</label>
+      <input type="text" placeholder="Enter Month salary" ng-model="rate"/>
+      <label>Months</label>
+      <input type="text" placeholder="Enter Months"/>
+      <button type="button">Submit</button>
+      <label>Total Salary:<p ng-bind="rate"></p></label>
+      <label>total:{{rate}}</label>
+
+    </div>
+    <!--pannel 4 started-->
+
+      <div ng-controller="todoController">
+        <div class="container">
+        <h2>My Todo List</h2>
+        <form ng-submit="todoAdd()">
+          <input type="text" ng-model="todoInput" size="50" placeholder="Add New" class="form-control">
+          <button type="submit" class="btn btn-success">Success</button>
+        </form>
+        <br>
+        <div ng-repeat="x in todoList">
+          <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+        </div>
+        <p><button type="button" class="btn btn-danger" ng-click="remove()">Remove</button></p>
+        </div>
+      </div>
+
+    <!--Note pad App-->
+    <div ng-controller="todoController">
+      <div class="container">
+      <textarea style="background-color:pink;color:green" ng-model="message" cols="80" rows="20"></textarea>
+      <p align="center">
+        <button ng-click="save()">Save</button>
+        <button ng-click="clear()" class="btn btn-danger">Clear</button>
+      </p>
+      </div>
+    </div>
+
+    <!--button to go top-->
+    <button id="bottom" ng-click="scrollTo('top')">Go to top of the page</button>
+  </div>
+
+
+
+<!--script for accordion-->
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+  </script>

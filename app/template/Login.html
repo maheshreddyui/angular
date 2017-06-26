@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<style>
+  form {
+    border: 3px solid #f1f1f1;
+  }
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  img.avatar {
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+</style>
+  <body>
+  <h2><center>Login Form</center></h2>
+    <form>
+      <div class="imgcontainer">
+        <img src="https://s30.postimg.org/hcrn58dup/Whats_App_Image_2017-03-03_at_4.40.14_PM.jpg" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username(root)" name="uname"  id="username" ng-model="user.username" required/>
+
+          <!--<span style = "color:red" ng-show = "user.username.$dirty && user.username.$invalid">
+            <span ng-show = "user.username.$error.required">First Name is required.</span>
+          </span>-->
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw"  id="password" ng-model="user.password" required/>
+        <label><b>Re enter Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw"  id="password" ng-model="user.pasword" required>
+        <button type="submit" ng-click="loginUser()">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <a href="#!/signup"><button type="button" class="cancelbtn">SignUp</button></a>
+        <button type="button" ng-click="reset()" class="cancelbtn">Reset</button>
+        <span class="psw">Forgot <a href="#!/forgetpass">password?</a></span>
+      </div>
+    </form>
+
+    <!--<div ng-controller="loginController">
+      <div ng-include = "'Error.html'"></div>
+      <div ng-include = "'forgetpass.html'"></div>
+    </div>-->
+  </body>
+</html>

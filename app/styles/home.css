@@ -1,0 +1,173 @@
+
+.primary{
+  border-color: #337ab7;
+  border-width: 3px;
+  max-width: 50px;
+  margin-bottom: 46px;
+
+}
+.abt1{
+  color: #337ab7;
+}
+.text-muted{
+  color: #777777;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.bg-primary {
+  padding-top: 0px;
+  padding-bottom: 84px;
+}
+section {
+  padding: 100px 0;
+}
+hr.light {
+  border-color: white;
+  border-width: 3px;
+  max-width: 50px;
+}
+
+.crazy{
+  height: 57px;
+  width: 176px;
+  border-radius: 41px;
+  padding-top: 18px;
+}
+
+.crazy a{
+  text-decoration: none;
+  color: black;
+
+}
+.crazy:hover{
+  background-color: #f2f2f2;
+}
+
+/*accordion style started */
+.accordion {
+  overflow: hidden;
+  border: 1px solid #CACACA;
+  box-sizing: border-box;
+}
+.accordion-section-title {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid #CACACA;
+  background: #fff;
+  transition: all linear 0.15s;
+  font-size: 20px;
+  color: #23527c;
+  text-indent: 2em;
+  text-decoration: none;
+  padding: 31px 0;
+  text-transform: uppercase;
+  font-family: 'Text Me One', sans-serif;
+  font-weight: 600;
+}
+
+.accordion-section-content {
+  text-indent: 2em;
+}
+style.css:1187
+
+.accordion i {
+  float: right;
+  margin: 4px 20px 0 0;
+  color: #000;
+  font-size: 13px;
+}
+.accordion-section-title.active, .accordion-section-title:hover, .accordion-section-title.focus {
+  color: #23527c;
+  text-decoration: none;
+}
+.accordion-section ul li {
+  list-style-type: none;
+  line-height: 2em;
+  font-size: 14px;
+  color: #464646 !important;
+}
+.accordion-section h6 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: 'Text Me One', sans-serif;
+  color: #000;
+  font-weight: 600;
+}
+
+/*resume*/
+.bg-dark {
+  background-color: rgba(31,31,30,0.99);
+  color: white;
+}
+aside {
+  padding: 50px 0;
+}
+/*copy rights*/
+p.copy-right {
+  color: #999;
+  background: #191919;
+  text-align: center;
+  font-size: 13px;
+  padding: 20px 0;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-family: 'Text Me One', sans-serif;
+  margin-bottom: 0px;
+}
+/*navbar*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.akhil{
+  background:url('../images/bg.jpg') no-repeat 50% 30%;
+  background-size: cover;
+  text-align: center;
+
+  height: 725px;
+
+}
+.akhil a{
+  height: 44px;
+  width: 155px;
+  padding-top: 10px;
+  margin-top: 26px;
+  border-radius: 27px;
+}
+
+.ss:hover{
+  color: #118e00;
+}
+#ss:hover{
+  color: #118e00;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+/*scroll bar*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+#ass{
+  background-color: #f5f5f5 !important;
+}

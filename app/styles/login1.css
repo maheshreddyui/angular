@@ -1,0 +1,18 @@
+/*
+.pec{
+  background: url('https://s4.postimg.org/xtbq56nv1/login.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+
+.hero{
+  width: 150px;
+}
+
+.centering{
+  float:none;
+  margin:0 auto
+}
